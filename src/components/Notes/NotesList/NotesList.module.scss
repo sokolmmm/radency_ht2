@@ -1,0 +1,42 @@
+@import '../../../scss/variables';
+
+.notesList {
+  display: grid;
+  row-gap: 10px;
+
+  .note {
+    padding: 0 20px;
+    border-radius: 10px;
+    background: $white-color;
+    box-shadow: $primary-shadow;
+
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) 80px;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+
+  }
+  .noteItem {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+  
+    font-family: $body-font;
+    font-size: $smaller-font-size;
+    font-weight: 400;
+    color: $gray-color;
+  }
+  
+  .noteItem:last-child {
+    justify-self: end;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+  
+    padding-left: 0;
+  }
+}
