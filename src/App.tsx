@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Home from './pages/Home/Home';
 
-function App(): any {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Routes>

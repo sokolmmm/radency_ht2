@@ -17,5 +17,13 @@
     "project": ["./tsconfig.json"]
   },
   "plugins": ["react"],
-  "rules": {}
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state"]
+      }
+    ]
+  }
 }
