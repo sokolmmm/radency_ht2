@@ -1,7 +1,7 @@
 /* eslint-disable import/no-cycle */
 import React from 'react';
+import { EnumTabs } from '../../../../redux/notes/interfaces';
 import styles from './TabButton.module.scss';
-import { EnumTabs } from '../../../Notes/Tabs/Tabs';
 
 export enum EnumSide {
   LEFT = 'left',
@@ -9,7 +9,6 @@ export enum EnumSide {
 }
 
 interface ITabButtonProps {
-  title: string;
   name: EnumTabs;
   side: EnumSide;
   isActive: boolean;
@@ -17,7 +16,7 @@ interface ITabButtonProps {
 }
 
 function TabButton({
-  title, name, side, isActive, onTabsClick,
+  name, side, isActive, onTabsClick,
 }: ITabButtonProps): JSX.Element {
   return (
     <button
@@ -29,7 +28,7 @@ function TabButton({
           : `${styles.tabButton} ${styles[side]}`
       }
     >
-      {title}
+      {name}
     </button>
   );
 }
