@@ -1,28 +1,28 @@
 import React from 'react';
-import IconButton from '../../common/buttons/IconButton/IconButton';
+import { useDispatch } from 'react-redux';
+import { deleteNotes } from '../../../redux/notes/slice';
+import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
+import TableHeaderItem from '../../common/TableHeaderItem';
 import styles from './NotesTableHeader.module.scss';
 
-function NotesTableHeader(): any {
+const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
+
+function NotesTableHeader(): JSX.Element {
+  const dispatch = useDispatch();
+
+  const deleteAllNotes = (): void => {
+    dispatch(deleteNotes());
+  };
+
   return (
     <header className={styles.notesTableHeader}>
-      <div className={styles.headerItem}>
-        <span>Name</span>
-      </div>
-      <div className={styles.headerItem}>
-        <span>Created</span>
-      </div>
-      <div className={styles.headerItem}>
-        <span>Category</span>
-      </div>
-      <div className={styles.headerItem}>
-        <span>Content</span>
-      </div>
-      <div className={styles.headerItem}>
-        <span>Dates</span>
-      </div>
-      <div className={styles.headerItem}>
-        <IconButton />
-        <IconButton />
+      {headerItems.map((el) => (
+        <TableHeaderItem title={el} key={el} />
+      ))}
+
+      <div className={styles.buttonsBlock}>
+        <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={deleteAllNotes} />
+        <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteAllNotes} />
       </div>
     </header>
   );
