@@ -1,15 +1,15 @@
-import React from 'react'
-import NotesList from '../NotesList/NotesList'
-import NotesTableHeader from '../NotesTableHeader/NotesTableHeader'
-import styles from './NotesTable.module.scss'
+import React from 'react';
+import NotesList from '../NotesList/NotesList';
+import NotesTableHeader from '../NotesTableHeader/NotesTableHeader';
+import styles from './NotesTable.module.scss';
 
-function NotesTable (): any {
+function NotesTable(): any {
   return (
     <div className={styles.notesTable}>
-        <NotesTableHeader />
-        <NotesList />
+      <NotesTableHeader />
+      <NotesList />
     </div>
-  )
+  );
 }
 
-export default NotesTable
+export default NotesTable;

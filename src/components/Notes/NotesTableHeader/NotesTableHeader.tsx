@@ -1,8 +1,8 @@
-import React from 'react'
-import IconButton from '../../common/buttons/IconButton/IconButton'
-import styles from './NotesTableHeader.module.scss'
+import React from 'react';
+import IconButton from '../../common/buttons/IconButton/IconButton';
+import styles from './NotesTableHeader.module.scss';
 
-function NotesTableHeader (): any {
+function NotesTableHeader(): any {
   return (
     <header className={styles.notesTableHeader}>
       <div className={styles.headerItem}>
@@ -25,7 +25,7 @@ function NotesTableHeader (): any {
         <IconButton />
       </div>
     </header>
-  )
+  );
 }
 
-export default NotesTableHeader
+export default NotesTableHeader;

@@ -1,17 +1,17 @@
-import React from 'react'
-import GreenButton from '../../common/buttons/GreenButton/GreenButton'
-import Tabs from '../../common/Tabs/Tabs'
-import NotesTable from '../NotesTable/NotesTable'
-import styles from './Notes.module.scss'
+import React from 'react';
+import GreenButton from '../../common/buttons/GreenButton/GreenButton';
+import NotesTable from '../NotesTable/NotesTable';
+import Tabs from '../Tabs/Tabs';
+import styles from './Notes.module.scss';
 
-function Notes (): any {
+function Notes(): JSX.Element {
   return (
     <section className={styles.notesTable}>
       <Tabs />
       <NotesTable />
-      <GreenButton />
+      <GreenButton title="Create Note" />
     </section>
-  )
+  );
 }
 
-export default Notes
+export default Notes;

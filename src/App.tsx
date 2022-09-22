@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
-import './App.scss'
-import Home from './pages/Home/Home'
+import './App.scss';
+import Home from './pages/Home/Home';
 
-function App (): any {
+function App(): any {
   return (
     <div className="App">
       <Routes>
@@ -16,7 +16,7 @@ function App (): any {
         </Route>
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
