@@ -12,7 +12,7 @@ const initialState: INotesState = {
       category: 'Task',
       content: 'Tomatoes, bread',
       dates: '',
-      isActive: false,
+      isActive: true,
     },
     {
       id: '4b003292-8f21-4b6b-82ff-289691eb62422',
@@ -41,9 +41,19 @@ export const notesSlice = createSlice({
         state.notes = state.notes.filter((el) => el.isActive === true);
       }
     },
+    toggleNotesStatus: (state: INotesState) => {
+      const activeTab = state.activeTab === EnumTabs.ACTIVE;
+
+      state.notes = state.notes.map((el) => {
+        if (el.isActive === activeTab) {
+          return { ...el, isActive: !activeTab };
+        }
+        return el;
+      });
+    },
   },
 });
 
-export const { setActiveTab, deleteNotes } = notesSlice.actions;
+export const { setActiveTab, deleteNotes, toggleNotesStatus } = notesSlice.actions;
 
 export default notesSlice.reducer;

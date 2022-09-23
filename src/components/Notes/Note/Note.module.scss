@@ -1,0 +1,25 @@
+@import '../../../scss/variables';
+
+.note {
+  padding: 0 20px;
+  border-radius: 10px;
+  background: $white-color;
+  box-shadow: $primary-shadow;
+
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 80px;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+
+  .buttonsBlock {
+    justify-self: end;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+
+    padding-left: 0;
+  }
+}

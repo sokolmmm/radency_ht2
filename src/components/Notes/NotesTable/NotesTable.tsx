@@ -1,5 +1,5 @@
 import React from 'react';
-import NotesList from '../NotesList/NotesList';
+import NotesList from '../NotesList';
 import NotesTableHeader from '../NotesTableHeader/NotesTableHeader';
 import styles from './NotesTable.module.scss';
 

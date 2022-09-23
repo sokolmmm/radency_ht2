@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteNotes } from '../../../redux/notes/slice';
+import { deleteNotes, toggleNotesStatus } from '../../../redux/notes/slice';
 import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
 import TableHeaderItem from '../../common/TableHeaderItem';
 import styles from './NotesTableHeader.module.scss';
@@ -14,6 +14,10 @@ function NotesTableHeader(): JSX.Element {
     dispatch(deleteNotes());
   };
 
+  const toggleAllNoteStatus = (): void => {
+    dispatch(toggleNotesStatus());
+  };
+
   return (
     <header className={styles.notesTableHeader}>
       {headerItems.map((el) => (
@@ -21,7 +25,7 @@ function NotesTableHeader(): JSX.Element {
       ))}
 
       <div className={styles.buttonsBlock}>
-        <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={deleteAllNotes} />
+        <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={toggleAllNoteStatus} />
         <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteAllNotes} />
       </div>
     </header>

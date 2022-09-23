@@ -1,0 +1,13 @@
+@import '../../../scss/variables';
+
+.noteItem {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+
+  font-family: $body-font;
+  font-size: $smaller-font-size;
+  font-weight: 400;
+  color: $gray-color;
+}
