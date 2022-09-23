@@ -1,6 +1,6 @@
 import React from 'react';
 import NotesList from '../NotesList';
-import NotesTableHeader from '../NotesTableHeader/NotesTableHeader';
+import NotesTableHeader from '../NotesTableHeader';
 import styles from './NotesTable.module.scss';
 
 function NotesTable(): any {

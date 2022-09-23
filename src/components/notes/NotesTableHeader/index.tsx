@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteNotes, toggleNotesStatus } from '../../../redux/notes/slice';
 import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
-import TableHeaderItem from '../../common/TableHeaderItem';
+import HeaderElement from '../../common/HeaderElement';
 import styles from './NotesTableHeader.module.scss';
 
 const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
@@ -21,7 +21,7 @@ function NotesTableHeader(): JSX.Element {
   return (
     <header className={styles.notesTableHeader}>
       {headerItems.map((el) => (
-        <TableHeaderItem title={el} key={el} />
+        <HeaderElement title={el} key={el} />
       ))}
 
       <div className={styles.buttonsBlock}>

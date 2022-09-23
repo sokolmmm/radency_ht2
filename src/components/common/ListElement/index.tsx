@@ -5,7 +5,7 @@ interface INoteItem {
   title: string;
 }
 
-function NoteItem({ title }: INoteItem) {
+function ListElement({ title }: INoteItem) {
   return (
     <div className={styles.noteItem}>
       <span>{title}</span>
@@ -13,4 +13,4 @@ function NoteItem({ title }: INoteItem) {
   );
 }
 
-export default NoteItem;
+export default ListElement;

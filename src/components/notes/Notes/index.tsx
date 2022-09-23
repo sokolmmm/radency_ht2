@@ -1,7 +1,7 @@
 import React from 'react';
 import GreenButton from '../../common/buttons/GreenButton/GreenButton';
-import NotesTable from '../NotesTable/NotesTable';
-import Tabs from '../Tabs/Tabs';
+import NotesTable from '../NotesTable';
+import Tabs from '../Tabs';
 import styles from './Notes.module.scss';
 
 function Notes(): JSX.Element {

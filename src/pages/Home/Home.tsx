@@ -1,5 +1,5 @@
 import React from 'react';
-import Notes from '../../components/Notes/Notes/Notes';
+import Notes from '../../components/notes/Notes';
 import styles from './Home.module.scss';
 
 function Home(): any {

@@ -5,7 +5,7 @@ interface ITableHeaderItem {
   title: string;
 }
 
-function TableHeaderItem({ title }: ITableHeaderItem) {
+function HeaderElement({ title }: ITableHeaderItem) {
   return (
     <div className={styles.tableHeaderItem}>
       <span>{title}</span>
@@ -13,4 +13,4 @@ function TableHeaderItem({ title }: ITableHeaderItem) {
   );
 }
 
-export default TableHeaderItem;
+export default HeaderElement;
