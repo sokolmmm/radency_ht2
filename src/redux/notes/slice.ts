@@ -55,11 +55,15 @@ export const notesSlice = createSlice({
       const noteIndex = state.notes.findIndex((el) => el.id === action.payload);
       state.notes.splice(noteIndex, 1);
     },
+    toggleNoteStatus: (state: INotesState, action: PayloadAction<string>) => {
+      const noteIndex = state.notes.findIndex((el) => el.id === action.payload);
+      state.notes[noteIndex].isActive = !state.notes[noteIndex].isActive;
+    },
   },
 });
 
 export const {
-  setActiveTab, deleteNotes, toggleNotesStatus, deleteNote,
+  setActiveTab, deleteNotes, toggleNotesStatus, deleteNote, toggleNoteStatus,
 } = notesSlice.actions;
 
 export default notesSlice.reducer;
