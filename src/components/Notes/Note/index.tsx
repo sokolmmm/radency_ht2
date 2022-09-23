@@ -1,10 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import NoteItem from '../../common/NoteItem';
 import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
 import styles from './Note.module.scss';
+import { deleteNote } from '../../../redux/notes/slice';
 
 interface INote {
+  id: string;
   name: string;
   created: string;
   category: string;
@@ -13,8 +16,14 @@ interface INote {
 }
 
 function Note({
-  name, created, category, content, dates,
+  id, name, created, category, content, dates,
 }: INote) {
+  const dispatch = useDispatch();
+
+  const deleteNoteOnClick = (): void => {
+    dispatch(deleteNote(id));
+  };
+
   return (
     <div className={styles.note}>
       <NoteItem title={name} />
@@ -25,7 +34,7 @@ function Note({
       <div className={styles.buttonsBlock}>
         <IconButton icon={EnumIconButton.EDIT} onButtonClick={() => null} />
         <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={() => null} />
-        <IconButton icon={EnumIconButton.DELETE} onButtonClick={() => null} />
+        <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteNoteOnClick} />
       </div>
     </div>
   );
