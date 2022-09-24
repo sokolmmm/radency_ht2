@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { EnumTabs, INotesState } from './interfaces';
+import { EnumCategories, EnumTabs, INotesState } from './interfaces';
 
 const initialState: INotesState = {
   notes: [
@@ -25,6 +25,7 @@ const initialState: INotesState = {
     },
   ],
   activeTab: EnumTabs.ACTIVE,
+  categories: [EnumCategories.IDEA, EnumCategories.RANDOM_THOUGHT, EnumCategories.TASK],
 };
 
 export const notesSlice = createSlice({

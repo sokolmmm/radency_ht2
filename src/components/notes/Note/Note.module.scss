@@ -6,20 +6,52 @@
   background: $white-color;
   box-shadow: $primary-shadow;
 
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr) 80px;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-
-  .buttonsBlock {
-    justify-self: end;
+  .elementsList {
+    height: 100%;
     display: grid;
+    grid-template-columns: repeat(5, 1fr) 80px;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
+    justify-content: center;
+    height: 60px;
 
-    padding-left: 0;
+    .buttonsBlock {
+      justify-self: end;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .note {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    height: auto;
+    padding: 0;
+    border-radius: 15px;
+
+    .elementsList {
+      height: 100%;
+      grid-template-rows: repeat(5, 25px);
+      grid-template-columns: 1fr 40px;
+      align-items: center;
+      justify-content: center;
+
+      .buttonsBlock {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 6;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 10px;
+        justify-self: center;
+      }
+    }
   }
 }

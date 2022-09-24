@@ -1,0 +1,13 @@
+.summaryTable {
+  display: grid;
+  grid-template-rows: 40px auto;
+  row-gap: 10px;
+
+  padding: 60px 20px 20px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .summaryTable {
+    grid-template-rows: auto;
+  }
+}

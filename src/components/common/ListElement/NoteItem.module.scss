@@ -1,6 +1,6 @@
 @import '../../../scss/variables';
 
-.noteItem {
+.listElement {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -10,4 +10,7 @@
   font-size: $smaller-font-size;
   font-weight: 400;
   color: $gray-color;
+
+  align-self: center;
+
 }

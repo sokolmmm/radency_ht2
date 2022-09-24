@@ -1,0 +1,19 @@
+@import '../../../scss/variables';
+
+.summaryHeader {
+  background: $green-color;
+  border-radius: 10px;
+  padding: 0 20px;
+  box-shadow: $primary-shadow;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .summaryHeader {
+    display: none;
+  }
+}

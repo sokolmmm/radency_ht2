@@ -6,6 +6,9 @@ import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/Icon
 import styles from './Note.module.scss';
 
 import { deleteNote, toggleNoteStatus } from '../../../redux/notes/slice';
+import AdaptiveHeader from '../../common/AdaptiveHeader/AdaptiveHeader';
+
+const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
 
 interface INote {
   id: string;
@@ -31,15 +34,19 @@ function Note({
 
   return (
     <div className={styles.note}>
-      <ListElement title={name} />
-      <ListElement title={created} />
-      <ListElement title={category} />
-      <ListElement title={content} />
-      <ListElement title={dates} />
-      <div className={styles.buttonsBlock}>
-        <IconButton icon={EnumIconButton.EDIT} onButtonClick={() => null} />
-        <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={toggleNoteStatusOnClick} />
-        <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteNoteOnClick} />
+      <AdaptiveHeader headerItems={headerItems} />
+
+      <div className={styles.elementsList}>
+        <ListElement title={name} />
+        <ListElement title={created} />
+        <ListElement title={category} />
+        <ListElement title={content} />
+        <ListElement title={dates} />
+        <div className={styles.buttonsBlock}>
+          <IconButton icon={EnumIconButton.EDIT} onButtonClick={() => null} />
+          <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={toggleNoteStatusOnClick} />
+          <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteNoteOnClick} />
+        </div>
       </div>
     </div>
   );

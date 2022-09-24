@@ -5,9 +5,9 @@ interface INoteItem {
   title: string;
 }
 
-function ListElement({ title }: INoteItem) {
+function ListElement({ title }: INoteItem): JSX.Element {
   return (
-    <div className={styles.noteItem}>
+    <div className={styles.listElement}>
       <span>{title}</span>
     </div>
   );

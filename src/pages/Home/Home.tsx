@@ -1,11 +1,13 @@
 import React from 'react';
 import Notes from '../../components/notes/Notes';
+import SummaryTable from '../../components/summaryTable/SummaryTable';
 import styles from './Home.module.scss';
 
-function Home(): any {
+function Home(): JSX.Element {
   return (
     <div className={styles.wrapper}>
       <Notes />
+      <SummaryTable />
     </div>
   );
 }

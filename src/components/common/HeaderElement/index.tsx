@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TableHeaderItem.module.scss';
+import styles from './HeaderElement.module.scss';
 
 interface ITableHeaderItem {
   title: string;
@@ -7,7 +7,7 @@ interface ITableHeaderItem {
 
 function HeaderElement({ title }: ITableHeaderItem) {
   return (
-    <div className={styles.tableHeaderItem}>
+    <div className={styles.headerElement}>
       <span>{title}</span>
     </div>
   );

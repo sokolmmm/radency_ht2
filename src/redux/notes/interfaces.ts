@@ -3,6 +3,12 @@ export enum EnumTabs {
   ARCHIVED = 'archived',
 }
 
+export enum EnumCategories {
+  TASK = 'Task',
+  RANDOM_THOUGHT = 'Random thought',
+  IDEA = 'Idea',
+}
+
 export interface INote {
   id: string;
   name: string;
@@ -16,4 +22,16 @@ export interface INote {
 export interface INotesState {
   notes: INote[];
   activeTab: EnumTabs;
+  categories: EnumCategories[];
+}
+
+export interface ICategories {
+  notes: INote[];
+  activeTab: EnumTabs;
+}
+
+export interface ISummaryByCategories {
+  category: string;
+  active: string;
+  archived: string;
 }
