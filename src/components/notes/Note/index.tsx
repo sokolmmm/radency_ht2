@@ -1,17 +1,18 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import ListElement from '../../common/ListElement';
-import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
+import IconButton, { EnumIconButton } from '../../common/buttons/IconButton';
 import styles from './Note.module.scss';
 
-import { deleteNote, toggleNoteStatus } from '../../../redux/notes/slice';
-import AdaptiveHeader from '../../common/AdaptiveHeader/AdaptiveHeader';
+import { deleteNote, setCurrentNoteId, toggleNoteStatus } from '../../../redux/notes/slice';
+import AdaptiveHeader from '../../common/AdaptiveHeader';
 
 const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
 
 interface INote {
-  id: string;
+  id: number;
   name: string;
   created: string;
   category: string;
@@ -23,6 +24,7 @@ function Note({
   id, name, created, category, content, dates,
 }: INote) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const deleteNoteOnClick = (): void => {
     dispatch(deleteNote(id));
@@ -30,6 +32,11 @@ function Note({
 
   const toggleNoteStatusOnClick = (): void => {
     dispatch(toggleNoteStatus(id));
+  };
+
+  const showEditNoteWindowOnClick = (): void => {
+    dispatch(setCurrentNoteId(id));
+    navigate(`/note/${id}/edit`);
   };
 
   return (
@@ -43,7 +50,7 @@ function Note({
         <ListElement title={content} />
         <ListElement title={dates} />
         <div className={styles.buttonsBlock}>
-          <IconButton icon={EnumIconButton.EDIT} onButtonClick={() => null} />
+          <IconButton icon={EnumIconButton.EDIT} onButtonClick={showEditNoteWindowOnClick} />
           <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={toggleNoteStatusOnClick} />
           <IconButton icon={EnumIconButton.DELETE} onButtonClick={deleteNoteOnClick} />
         </div>

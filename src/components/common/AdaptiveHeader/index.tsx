@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HeaderElement from '../HeaderElement';
 import styles from './AdaptiveHeader.module.scss';
 

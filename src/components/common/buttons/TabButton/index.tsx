@@ -1,7 +1,8 @@
-/* eslint-disable import/no-cycle */
 import React from 'react';
-import { EnumTabs } from '../../../../redux/notes/interfaces';
+
 import styles from './TabButton.module.scss';
+
+import { EnumTabs } from '../../../../redux/notes/interfaces';
 
 export enum EnumSide {
   LEFT = 'left',

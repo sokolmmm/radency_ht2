@@ -10,7 +10,7 @@ export enum EnumCategories {
 }
 
 export interface INote {
-  id: string;
+  id: number;
   name: string;
   created: string;
   category: string;
@@ -23,6 +23,7 @@ export interface INotesState {
   notes: INote[];
   activeTab: EnumTabs;
   categories: EnumCategories[];
+  currentNoteId: number;
 }
 
 export interface ICategories {
@@ -34,4 +35,12 @@ export interface ISummaryByCategories {
   category: string;
   active: string;
   archived: string;
+}
+
+export interface IEditTaskPayload {
+  id: number;
+  name: string;
+  category: string;
+  content: string;
+  dates: string,
 }

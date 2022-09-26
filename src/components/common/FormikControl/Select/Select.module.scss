@@ -1,0 +1,71 @@
+@import '../../../../scss/variables';
+
+.formControl {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+
+  label {
+    font-family: $body-font;
+    font-size: $small-font-size;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $gray-color;
+  }
+
+  .selectWrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      pointer-events: none;
+
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $gray-color transparent transparent transparent;
+    }
+
+    select {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      background-color: $form-control-background;
+      border: 2px solid $border-color;
+      border-radius: 2px;
+      padding: 0 25px 0 15px;
+      cursor: pointer;
+
+      font-family: $body-font;
+      font-size: $smaller-font-size;
+      font-style: normal;
+      font-weight: 400;
+      color: $black-color;
+    }
+
+    .error {
+      border: 2px solid red;
+
+    }
+  }
+
+  .textError {
+    display: grid;
+    align-items: center;
+    font-size: $smaller-font-size;
+    color: red;
+  }
+}

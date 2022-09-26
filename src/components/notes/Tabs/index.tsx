@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { EnumTabs } from '../../../redux/notes/interfaces';
 import { selectActiveTab } from '../../../redux/notes/selectors';
 import { setActiveTab } from '../../../redux/notes/slice';
-import TabButton, { EnumSide } from '../../common/buttons/TabButton/TabButton';
+import TabButton, { EnumSide } from '../../common/buttons/TabButton';
 import styles from './Tabs.module.scss';
 
 function Tabs(): JSX.Element {
