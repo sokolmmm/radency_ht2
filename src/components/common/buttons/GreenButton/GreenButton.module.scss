@@ -1,0 +1,47 @@
+@import '../../../../scss/variables';
+
+.greenButton {
+  width: 200px;
+  background: $green-color;
+  color: $white-color;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+
+  justify-self: end;
+  cursor: pointer;
+  font-family: $title-font;
+  font-weight: 600;
+  font-size: $small-font-size;
+
+  transition: backgroung 0.2s ease-in-out;
+
+  & img {
+    width: 14px;
+    height: 12px;
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    pointer-events: none;
+    transition: transform 0.15s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:hover img {
+    transform: translateX(10px);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .greenButton {
+    width: 100%;
+  }
+}

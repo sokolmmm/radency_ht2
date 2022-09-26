@@ -1,0 +1,41 @@
+@import '../../../../scss/variables';
+
+.tabButton {
+  border: none;
+  padding: 0;
+  outline: 0;
+  cursor: pointer;
+  background: $background-alt-color;
+
+  font-family: $title-font;
+  font-size: $normal-font-size;
+  font-weight: 600;
+  color: $green-color;
+  text-transform: uppercase;
+  box-shadow: $primary-shadow;
+
+  text-transform: uppercase;
+  transition: 0.05s ease-in-out;
+
+  &:hover {
+    background: $green-color;
+    color: $white-color;
+  }
+
+  &:active {
+    transform: translateY(5px);
+  }
+}
+
+.active {
+  color: $white-color;
+  background: $green-color;
+}
+
+.left {
+  border-radius: 15px 0 0 15px;
+}
+
+.right {
+  border-radius: 0 15px 15px 0;
+}

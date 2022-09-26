@@ -1,0 +1,11 @@
+.notesTable {
+  display: grid;
+  grid-template-rows: 40px auto;
+  row-gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .notesTable {
+    grid-template-rows: auto;
+  }
+}

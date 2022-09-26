@@ -1,0 +1,12 @@
+@import '../../../scss/variables';
+
+.noteWindow {
+  margin: 0 20px;
+  padding: 40px;
+  background: $background-alt-color;
+  border-radius: 15px;
+
+  display: grid;
+  grid-template-rows: 40px auto;
+  row-gap: 20px;
+}
