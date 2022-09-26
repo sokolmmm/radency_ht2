@@ -1,12 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
-import { EnumCategories, EnumTabs, INotesState } from './interfaces';
+import {
+  EnumCategories,
+  EnumTabs,
+  IEditTaskPayload,
+  INote,
+  INotesState,
+} from './interfaces';
 
 const initialState: INotesState = {
   notes: [
     {
-      id: '4b003292-8f21-4b6b-82ff-289691eb624b',
+      id: 1,
       name: 'Shopping list',
       created: '10/05/2022',
       category: 'Task',
@@ -15,7 +21,7 @@ const initialState: INotesState = {
       isActive: true,
     },
     {
-      id: '4b003292-8f21-4b6b-82ff-289691eb62422',
+      id: 2,
       name: 'Fly to Mars ',
       created: '20/05/2022',
       category: 'Random thought',
@@ -26,6 +32,7 @@ const initialState: INotesState = {
   ],
   activeTab: EnumTabs.ACTIVE,
   categories: [EnumCategories.IDEA, EnumCategories.RANDOM_THOUGHT, EnumCategories.TASK],
+  currentNoteId: 0,
 };
 
 export const notesSlice = createSlice({
@@ -52,19 +59,39 @@ export const notesSlice = createSlice({
         return el;
       });
     },
-    deleteNote: (state: INotesState, action: PayloadAction<string>) => {
+    deleteNote: (state: INotesState, action: PayloadAction<number>) => {
       const noteIndex = state.notes.findIndex((el) => el.id === action.payload);
       state.notes.splice(noteIndex, 1);
     },
-    toggleNoteStatus: (state: INotesState, action: PayloadAction<string>) => {
+    toggleNoteStatus: (state: INotesState, action: PayloadAction<number>) => {
       const noteIndex = state.notes.findIndex((el) => el.id === action.payload);
       state.notes[noteIndex].isActive = !state.notes[noteIndex].isActive;
+    },
+    setCurrentNoteId: (state: INotesState, action: PayloadAction<number>) => {
+      state.currentNoteId = action.payload;
+    },
+    saveEditedNote: (state: INotesState, action: PayloadAction<IEditTaskPayload>) => {
+      if (state.currentNoteId > 0) {
+        const index = state.notes.findIndex((el) => el.id === action.payload.id);
+        state.notes[index] = { ...state.notes[index], ...action.payload };
+      }
+      state.currentNoteId = 0;
+    },
+    saveCreatedNote: (state: INotesState, action: PayloadAction<INote>) => {
+      state.notes.push(action.payload);
     },
   },
 });
 
 export const {
-  setActiveTab, deleteNotes, toggleNotesStatus, deleteNote, toggleNoteStatus,
+  setActiveTab,
+  deleteNotes,
+  toggleNotesStatus,
+  deleteNote,
+  toggleNoteStatus,
+  setCurrentNoteId,
+  saveEditedNote,
+  saveCreatedNote,
 } = notesSlice.actions;
 
 export default notesSlice.reducer;

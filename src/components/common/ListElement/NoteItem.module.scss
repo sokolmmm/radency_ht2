@@ -13,4 +13,7 @@
 
   align-self: center;
 
+  &:nth-child(5) {
+    padding: 0 10px;
+  }
 }

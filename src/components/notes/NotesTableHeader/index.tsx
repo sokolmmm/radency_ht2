@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteNotes, toggleNotesStatus } from '../../../redux/notes/slice';
-import IconButton, { EnumIconButton } from '../../common/buttons/IconButton/IconButton';
+import IconButton, { EnumIconButton } from '../../common/buttons/IconButton';
 import HeaderElement from '../../common/HeaderElement';
 import styles from './NotesTableHeader.module.scss';
 
