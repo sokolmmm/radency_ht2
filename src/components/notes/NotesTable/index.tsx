@@ -1,9 +1,10 @@
 import React from 'react';
+
 import NotesList from '../NotesList';
 import NotesTableHeader from '../NotesTableHeader';
 import styles from './NotesTable.module.scss';
 
-function NotesTable(): any {
+function NotesTable(): JSX.Element {
   return (
     <div className={styles.notesTable}>
       <NotesTableHeader />

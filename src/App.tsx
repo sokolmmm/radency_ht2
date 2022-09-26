@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import './App.scss';
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import NotePage from './pages/NotePage';
+import './App.scss';
 
 function App(): JSX.Element {
   return (

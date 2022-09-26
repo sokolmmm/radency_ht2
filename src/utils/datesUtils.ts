@@ -1,6 +1,7 @@
 class DateUtils {
   static formatDate(date: Date): string {
     const dataFormat = new Intl.DateTimeFormat('en-UK');
+
     return dataFormat.format(date);
   }
 

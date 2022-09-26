@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HeaderElement from '../../common/HeaderElement';
 import styles from './SummaryHeader.module.scss';
 

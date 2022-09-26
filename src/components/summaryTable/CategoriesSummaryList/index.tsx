@@ -1,10 +1,11 @@
 import React from 'react';
+
 import { useSelector } from 'react-redux';
 
 import CategorySummary from '../CategorySummary';
-import { selectSummaryByCategories } from '../../../redux/notes/selectors';
-
 import styles from './CategoriesSummaryList.module.scss';
+
+import { selectSummaryByCategories } from '../../../redux/notes/selectors';
 
 function CategoriesSummaryList(): JSX.Element {
   const summaryByCategories = useSelector(selectSummaryByCategories);

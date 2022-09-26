@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Notes from '../../components/notes/Notes';
 import SummaryTable from '../../components/summaryTable/SummaryTable';
 import styles from './Home.module.scss';

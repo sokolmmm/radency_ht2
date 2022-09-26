@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CategoriesSummaryList from '../CategoriesSummaryList';
 import SummaryHeader from '../SummaryHeader';
 

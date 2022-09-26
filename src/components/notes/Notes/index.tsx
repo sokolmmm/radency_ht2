@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
-import GreenButton from '../../common/buttons/GreenButton';
-import NotesTable from '../NotesTable';
+
 import Tabs from '../Tabs';
+import NotesTable from '../NotesTable';
+import GreenButton from '../../common/buttons/GreenButton';
 import styles from './Notes.module.scss';
 
 function Notes(): JSX.Element {

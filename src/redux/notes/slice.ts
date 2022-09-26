@@ -2,11 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 import {
-  EnumCategories,
-  EnumTabs,
-  IEditTaskPayload,
-  INote,
-  INotesState,
+  EnumCategories, EnumTabs, IEditTaskPayload, INote, INotesState,
 } from './interfaces';
 
 const initialState: INotesState = {
@@ -18,7 +14,7 @@ const initialState: INotesState = {
       category: 'Task',
       content: 'Tomatoes, bread',
       dates: '',
-      isActive: true,
+      isActive: false,
     },
     {
       id: 2,
@@ -28,6 +24,51 @@ const initialState: INotesState = {
       content: 'I think I need to fly to Mars ',
       dates: '',
       isActive: true,
+    },
+    {
+      id: 3,
+      name: 'New feature',
+      created: '15/09/2022',
+      category: 'Idea',
+      content: 'Add validation to inputs',
+      dates: '',
+      isActive: false,
+    },
+    {
+      id: 4,
+      name: 'Home task 1',
+      created: '10/09/2022',
+      category: 'Task',
+      content: 'Complete the task by 20-09-2022',
+      dates: '20/09/2022',
+      isActive: false,
+    },
+    {
+      id: 5,
+      name: 'Home task 2',
+      created: '10/09/2022',
+      category: 'Task',
+      content: 'Complete the task by 25-09-2022',
+      dates: '25/09/2022',
+      isActive: true,
+    },
+    {
+      id: 6,
+      name: 'Home task 3',
+      created: '10/09/2022',
+      category: 'Task',
+      content: 'Complete the task by 30-09-2022',
+      dates: '30/09/2022',
+      isActive: true,
+    },
+    {
+      id: 7,
+      name: 'Books',
+      created: '10/02/2022',
+      category: 'Task',
+      content: 'The Lord of the Rings',
+      dates: '',
+      isActive: false,
     },
   ],
   activeTab: EnumTabs.ACTIVE,

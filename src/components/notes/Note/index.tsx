@@ -1,15 +1,14 @@
 import React from 'react';
+
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
+import AdaptiveHeader from '../../common/AdaptiveHeader';
 import ListElement from '../../common/ListElement';
 import IconButton, { EnumIconButton } from '../../common/buttons/IconButton';
 import styles from './Note.module.scss';
 
 import { deleteNote, setCurrentNoteId, toggleNoteStatus } from '../../../redux/notes/slice';
-import AdaptiveHeader from '../../common/AdaptiveHeader';
-
-const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
 
 interface INote {
   id: number;
@@ -20,9 +19,11 @@ interface INote {
   dates: string;
 }
 
+const headerItems = ['Name', 'Created', 'Category', 'Content', 'Dates'];
+
 function Note({
   id, name, created, category, content, dates,
-}: INote) {
+}: INote): JSX.Element {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

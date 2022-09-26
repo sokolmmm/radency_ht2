@@ -1,6 +1,7 @@
 import React from 'react';
-import ListElement from '../../common/ListElement';
+
 import AdaptiveHeader from '../../common/AdaptiveHeader';
+import ListElement from '../../common/ListElement';
 import styles from './CategorySummary.module.scss';
 
 interface ICategorySummary {
