@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home';
 import NotePage from './pages/NotePage';
-import './App.scss';
+import './App.css';
 
 function App(): JSX.Element {
   return (
