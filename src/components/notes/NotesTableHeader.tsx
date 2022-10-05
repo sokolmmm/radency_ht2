@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import HeaderElement from '../common/HeaderElement';
-import IconButton, { EnumIconButton } from '../common/buttons/IconButton';
+import IconButton, { EnumIconButton } from '../common/buttons/IconButton/IconButton';
 
 import { deleteNotes, toggleNotesStatus } from '../../redux/notes/slice';
 

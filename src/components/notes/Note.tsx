@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import AdaptiveHeader from '../common/AdaptiveHeader';
 import ListElement from '../common/ListElement';
-import IconButton, { EnumIconButton } from '../common/buttons/IconButton';
+import IconButton, { EnumIconButton } from '../common/buttons/IconButton/IconButton';
 
 import { deleteNote, setCurrentNoteId, toggleNoteStatus } from '../../redux/notes/slice';
 

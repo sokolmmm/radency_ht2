@@ -18,6 +18,12 @@
   },
   "plugins": ["react"],
   "rules": {
+    "react/jsx-props-no-spreading": [
+      "error",
+      {
+        "custom": "ignore"
+      }
+    ],
     "max-len": [
       "error",
       {
@@ -31,6 +37,7 @@
         "props": true,
         "ignorePropertyModificationsFor": ["state"]
       }
-    ]
+    ],
+    "react/function-component-definition": ["off"]
   }
 }

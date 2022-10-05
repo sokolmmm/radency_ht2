@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import IconButton, { EnumIconButton } from '../common/buttons/IconButton';
+import IconButton, { EnumIconButton } from '../common/buttons/IconButton/IconButton';
 
 interface INoteWindow {
   title: string;
