@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Tabs from './Tabs';
 import NotesTable from './NotesTable';
-import GreenButton from '../common/buttons/GreenButton';
+import GreenButton from '../common/buttons/GreenButton/GreenButton';
 
 function Notes(): JSX.Element {
   const navigate = useNavigate();
@@ -17,7 +17,11 @@ function Notes(): JSX.Element {
     <section className="p-5 grid gap-3">
       <Tabs />
       <NotesTable />
-      <GreenButton title="Create Note" isSubmitButton={false} onButtonClick={showCreateNoteWindow} />
+      <GreenButton
+        title="Create Note"
+        isSubmitButton={false}
+        onButtonClick={showCreateNoteWindow}
+      />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface IGreenButtonProps {
+export interface IGreenButtonProps {
   title: string;
   isSubmitButton: boolean;
   onButtonClick?: () => void;
@@ -19,8 +19,10 @@ function GreenButton({
     <button
       type={isSubmitButton ? 'submit' : 'button'}
       onClick={onButtonClick}
-      className="h-10 w-full bg-teal-700 text-white rounded-lg relative
-      justify-self-end font-mono font-semibold text-base disabled:opacity-50 disabled:pointer-events-none sm:w-52"
+      className="
+        h-10 w-full bor bg-teal-700 text-white rounded-lg relative justify-self-end font-mono
+        font-semibold text-base disabled:opacity-50 disabled:pointer-events-none sm:w-52
+      "
     >
       <span>{title}</span>
     </button>

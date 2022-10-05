@@ -4,7 +4,7 @@ import { Form, Formik } from 'formik';
 import { useSelector } from 'react-redux';
 import { object, string } from 'yup';
 
-import GreenButton from '../common/buttons/GreenButton';
+import GreenButton from '../common/buttons/GreenButton/GreenButton';
 import FormikControl, { EnumFormikControl } from '../common/FormikControl/FormikControl';
 
 import { selectAllCategories } from '../../redux/notes/selectors';

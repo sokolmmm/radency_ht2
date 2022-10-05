@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import AdaptiveHeader from '../common/AdaptiveHeader';
 import ListElement from '../common/ListElement';
-import IconButton, { EnumIconButton } from '../common/buttons/IconButton';
+import IconButton, { EnumIconButton } from '../common/buttons/IconButton/IconButton';
 
 import { deleteNote, setCurrentNoteId, toggleNoteStatus } from '../../redux/notes/slice';
 
@@ -41,16 +41,17 @@ function Note({
 
   return (
     <div
-      className="grid grid-cols-element h-30 bg-white rounded-xl shadow-xl
-      md:grid-cols-1 md:grid-rows-1 md:h-15 md:px-5
-    "
+      className="
+      grid grid-cols-element h-30 bg-white rounded-xl shadow-xl md:grid-cols-1
+      md:grid-rows-1 md:h-15 md:px-5
+      "
     >
       <AdaptiveHeader headerItems={headerItems} />
 
       <div
         className="h-30 grid grid-rows-5 grid-cols-note items-center justify-center
         md:h-15 md:grid-cols-table md:grid-rows-1
-      "
+        "
       >
         <ListElement title={name} />
         <ListElement title={created} />
@@ -58,9 +59,10 @@ function Note({
         <ListElement title={content} />
         <ListElement title={dates} />
         <div
-          className="grid grid-cols-1 grid-rows-3 gap-2.5 justify-self-center col-start-2 col-end-3 row-start-1 row-end-6
-          md:col-start-6 md:col-end-7 md:row-start-1 md:grid-cols-3 md:grid-rows-1
-        "
+          className="
+          grid grid-cols-1 grid-rows-3 gap-2.5 justify-self-center col-start-2 col-end-3 row-start-1
+          row-end-6 md:col-start-6 md:col-end-7 md:row-start-1 md:grid-cols-3 md:grid-rows-1
+          "
         >
           <IconButton icon={EnumIconButton.EDIT} onButtonClick={showEditNoteWindowOnClick} />
           <IconButton icon={EnumIconButton.ARCHIVE} onButtonClick={toggleNoteStatusOnClick} />

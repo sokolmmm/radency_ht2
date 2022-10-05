@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import archiveImg from '../../../assets/images/archive.png';
-import deleteImg from '../../../assets/images/delete.png';
-import editImg from '../../../assets/images/edit.png';
-import closeImg from '../../../assets/images/close.png';
+import archiveImg from '../../../../assets/images/archive.png';
+import deleteImg from '../../../../assets/images/delete.png';
+import editImg from '../../../../assets/images/edit.png';
+import closeImg from '../../../../assets/images/close.png';
 
 export enum EnumIconButton {
   DELETE = 'delete',
