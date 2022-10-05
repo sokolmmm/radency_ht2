@@ -1,15 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react';
-import GreenButton from './GreenButton';
+import { Meta, Story } from '@storybook/react';
+
+import GreenButton, { IGreenButtonProps } from './GreenButton';
 
 export default {
   title: 'Button',
   component: GreenButton,
-};
-
-export function Primary() {
-  return <GreenButton title="primary" isSubmitButton />;
-}
-
-export function Default() {
-  return <GreenButton title="click" isSubmitButton />;
-}
+} as Meta;

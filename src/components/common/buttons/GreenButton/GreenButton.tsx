@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface IGreenButtonProps {
+export interface IGreenButtonProps {
   title: string;
   isSubmitButton: boolean;
   onButtonClick?: () => void;

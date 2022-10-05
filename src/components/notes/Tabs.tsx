@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import TabButton, { EnumSide } from '../common/buttons/TabButton';
+import TabButton, { EnumSide } from '../common/buttons/TabButton/TabButton';
 
 import { setActiveTab } from '../../redux/notes/slice';
 import { EnumTabs } from '../../redux/notes/interfaces';
