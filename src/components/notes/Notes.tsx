@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Tabs from './Tabs';
 import NotesTable from './NotesTable';
-import GreenButton from '../common/buttons/GreenButton';
+import GreenButton from '../common/buttons/GreenButton/GreenButton';
 
 function Notes(): JSX.Element {
   const navigate = useNavigate();
