@@ -17,7 +17,11 @@ function Notes(): JSX.Element {
     <section className="p-5 grid gap-3">
       <Tabs />
       <NotesTable />
-      <GreenButton title="Create Note" isSubmitButton={false} onButtonClick={showCreateNoteWindow} />
+      <GreenButton
+        title="Create Note"
+        isSubmitButton={false}
+        onButtonClick={showCreateNoteWindow}
+      />
     </section>
   );
 }

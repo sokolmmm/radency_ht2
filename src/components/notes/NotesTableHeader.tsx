@@ -21,7 +21,11 @@ function NotesTableHeader(): JSX.Element {
   };
 
   return (
-    <header className="hidden h-10 shadow-xl bg-teal-700 rounded-lg py-0 px-5 grid-cols-table items-center md:grid">
+    <header
+      className="
+        hidden h-10 shadow-xl bg-teal-700 rounded-lg py-0 px-5 grid-cols-table items-center md:grid
+      "
+    >
       {headerItems.map((el) => (
         <HeaderElement title={el} key={el} />
       ))}

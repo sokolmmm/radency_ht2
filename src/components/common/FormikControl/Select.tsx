@@ -29,9 +29,9 @@ function Select({ name, label, options }: ISelect): JSX.Element {
           as="select"
           id={name}
           name={name}
-          className="h-full w-full box-border appearance-none outline-none py-0 pl-4 pr-6 cursor-pointer
-          border-2 border-solid border-gray-200 bg-zinc-50 font-body text-base ont-normal
-
+          className="
+            h-full w-full box-border appearance-none outline-none py-0 pl-4 pr-6 cursor-pointer
+            border-2 border-solid border-gray-200 bg-zinc-50 font-body text-base ont-normal
           "
         >
           {options.map((option) => (
